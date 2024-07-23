@@ -39,6 +39,7 @@
 - **Albums**: AlbumId, Title, ArtistId (references Artists), ReleaseDate, Genre, CoverImageUrl
 - **Genres**: GenreId, Name, Description
 - **Favorites**: FavoriteId, UserId (references Users), SongId (references Songs, nullable if favorites a playlist), PlaylistId (references Playlists, nullable if favorites a song)
+- **Ratings**: RatingId, UserId (references Users), SongId (references Songs), Rating (1-5), CreatedAt
 
 ## 4. API Design
 
@@ -92,6 +93,14 @@
 - **DELETE** /api/favorites/songs/{songId}: Remove a song from favorites.
 - **POST** /api/favorites/playlists: Add a playlist to favorites.
 - **DELETE** /api/favorites/playlists/{playlistId}: Remove a playlist from favorites.
+
+### 4.9. Ratings APIs
+
+- **POST** /api/ratings: Submit a rating for a song.
+- **GET** /api/ratings/songs/{songId}: Get ratings for a specific song.
+- **GET** /api/ratings/users/{userId}: Get ratings submitted by a specific user.
+- **PUT** /api/ratings/{ratingId}: Update a rating.
+- **DELETE** /api/ratings/{ratingId}: Delete a rating.
 
 ## 5. Endpoints
 
