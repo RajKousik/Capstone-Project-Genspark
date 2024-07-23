@@ -30,7 +30,8 @@
 
 ### 3.1. Tables
 
-- **Users**: UserId, Username, PasswordHash, Email, Role (Admin, Normal User, Premium User), CreatedAt
+- **User Auth**: Id, UserId, PasswordHash, PasswordHashKey, Email
+- **Users**: UserId, Username, Email, Role (Admin, Normal User, Premium User), DOB
 - **Songs**: SongId, Title, Artist, Album, Genre, Duration, ReleaseDate, Url
 - **Playlists**: PlaylistId, UserId (references Users), Name, CreatedAt
 - **PlaylistSongs**: PlaylistSongId, PlaylistId (references Playlists), SongId (references Songs)
