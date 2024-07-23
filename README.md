@@ -33,13 +33,12 @@
 - **User Auth**: Id, UserId, PasswordHash, PasswordHashKey, Email
 - **Users**: UserId, Username, Email, Role (Admin, Normal User, Premium User), DOB
 - **Songs**: SongId, Title, Artist, Album, Genre, Duration, ReleaseDate, Url
-- **Playlists**: PlaylistId, UserId (references Users), Name, CreatedAt
+- **Playlists**: PlaylistId, UserId (references Users), Name, isPublic
 - **PlaylistSongs**: PlaylistSongId, PlaylistId (references Playlists), SongId (references Songs)
 - **Artists**: ArtistId, Name, Bio, ImageUrl
-- **Albums**: AlbumId, Title, ArtistId (references Artists), ReleaseDate, Genre, CoverImageUrl
-- **Genres**: GenreId, Name, Description
+- **Albums**: AlbumId, Title, ArtistId (references Artists), ReleaseDate, CoverImageUrl
 - **Favorites**: FavoriteId, UserId (references Users), SongId (references Songs, nullable if favorites a playlist), PlaylistId (references Playlists, nullable if favorites a song)
-- **Ratings**: RatingId, UserId (references Users), SongId (references Songs), Rating (1-5), CreatedAt
+- **Ratings(Additional if time permits)**: RatingId, UserId (references Users), SongId (references Songs), Rating (1-5), CreatedAt
 
 ## 4. API Design
 
@@ -47,6 +46,7 @@
 
 - **POST** /api/users/register: Register a new user.
 - **POST** /api/users/login: Authenticate a user.
+- **POST** /api/users/premium: Update to Premium Subscription.
 - **GET** /api/users/profile: Get user profile.
 - **PUT** /api/users/profile: Update user profile.
 - **GET** /api/users/favorites: Get user favorites.
@@ -141,9 +141,6 @@ Admin endpoints are used by administrators to manage the system. These endpoints
 - **DELETE** /api/admin/albums/{id}: Delete an album.
 - **GET** /api/admin/albums: Get a list of all albums.
 
-#### Genre Management
+## ER Diagram
 
-- **POST** /api/admin/genres: Add a new genre.
-- **PUT** /api/admin/genres/{id}: Update genre details.
-- **DELETE** /api/admin/genres/{id}: Delete a genre.
-- **GET** /api/admin/genres: Get a list of all genres.
+![image](./ERD.png)
