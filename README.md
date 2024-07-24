@@ -1,5 +1,13 @@
 # Music App System
 
+## Front End Repository
+
+Find the FrontEnd repository [here](https://github.com/RajKousik/Capstone-FrontEnd-Genspark)
+
+## Back End Repository
+
+Find the BackEnd repository [here](https://github.com/RajKousik/Capstone-Backend-Genspark)
+
 ## 1. Requirements
 
 ### Functional Requirements
@@ -139,14 +147,6 @@ Admin endpoints are used by administrators to manage the system. These endpoints
 - **PUT** /api/admin/albums/{id}: Update album details.
 - **DELETE** /api/admin/albums/{id}: Delete an album.
 - **GET** /api/admin/albums: Get a list of all albums.
-
-## Front End Repository
-
-Find the repository [here](https://github.com/RajKousik/Capstone-FrontEnd-Genspark)
-
-## Back End Repository
-
-Find the repository [here](https://github.com/RajKousik/Capstone-Backend-Genspark)
 
 ## ER Diagram
 
