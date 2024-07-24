@@ -140,6 +140,14 @@ Admin endpoints are used by administrators to manage the system. These endpoints
 - **DELETE** /api/admin/albums/{id}: Delete an album.
 - **GET** /api/admin/albums: Get a list of all albums.
 
+## Front End Repository
+
+Find the repository [here](https://github.com/RajKousik/Capstone-FrontEnd-Genspark)
+
+## Back End Repository
+
+Find the repository [here](https://github.com/RajKousik/Capstone-Backend-Genspark)
+
 ## ER Diagram
 
 ![image](./ERD.png)
